@@ -1,0 +1,14 @@
+@media (max-width:69em) {
+   
+
+   
+    .box{
+        padding:1.4rem;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    .todo{
+        margin-bottom: 0.2rem;
+    }
+}
