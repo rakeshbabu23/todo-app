@@ -20,7 +20,7 @@ export default function AddTodos({ item, setItem, setFlag }) {
     if (currTodo) {
       setIsEmpty(false);
       axios
-        .post("https://todos-app-kj6x.onrender.com/todos", {
+        .post("https://app-for-todos.onrender.com/todos", {
           item: currTodo,
           color: color,
         })

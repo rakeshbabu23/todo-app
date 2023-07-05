@@ -15,7 +15,7 @@ const App = () => {
   useEffect(
     function () {
       async function fetchTodos() {
-        const todos = await fetch("https://todos-app-kj6x.onrender.com/todos");
+        const todos = await fetch("https://app-for-todos.onrender.com/todos");
         const res = await todos.json();
         setTodos([...res]);
       }
