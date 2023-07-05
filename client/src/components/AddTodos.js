@@ -21,9 +21,11 @@ export default function AddTodos({ item, setItem, setFlag }) {
       setIsEmpty(false);
       axios
         .post("http://localhost:5000/todos", { item: currTodo, color: color })
-        .then((res) => console.log(res));
+        .then((res) => {
+          console.log(res);
+          setFlag((flag) => !flag);
+        });
       setItem("");
-      setFlag((flag) => !flag);
     } else {
       setIsEmpty(true);
     }
