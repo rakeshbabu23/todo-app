@@ -1,11 +1,10 @@
-import Box from "./todo-project/Box";
-import AddTodos from "./todo-project/AddTodos";
-import Pending from "./todo-project/Pending";
-import "./todo-project/box.css";
-import "./todo-project/queries.css";
-import axios from "axios";
+import Box from "./components/Box";
+import AddTodos from "./components/AddTodos";
+import Pending from "./components/Pending";
+import "./components/box.css";
+import "./components/queries.css";
 import { useEffect, useState } from "react";
-import Completed from "./todo-project/Completed";
+import Completed from "./components/Completed";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -16,7 +15,7 @@ const App = () => {
   useEffect(
     function () {
       async function fetchTodos() {
-        const todos = await fetch("http://localhost:5000/todos");
+        const todos = await fetch("https://todos-app-kj6x.onrender.com/todos");
         const res = await todos.json();
         setTodos([...res]);
       }

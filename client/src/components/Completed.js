@@ -10,7 +10,7 @@ export default function Completed({
   function handleDelete(completedTodo) {
     setCompletedTodos(completedTodos.filter((todo) => todo !== completedTodo));
     axios
-      .delete(`http://localhost:5000/todos/${completedTodo}`)
+      .delete(`https://todos-app-kj6x.onrender.com/${completedTodo}`)
       .then((response) => {
         console.log(response.data);
       })
