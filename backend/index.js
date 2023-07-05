@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow requests from this origin
+    origin: "https://app-for-todo.netlify.app", // Allow requests from this origin
     methods: "GET,POST,DELETE", // Allow specific HTTP methods
     allowedHeaders: "Content-Type,Authorization", // Allow specific headers
   })
